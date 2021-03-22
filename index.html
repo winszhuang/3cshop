@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="all.css">
+    <title>3CShop</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-danger py-3">
+        <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand " href="/index.html">3CShop</a>
+        <div class="d-none d-md-block">
+            <a class="text-white mx-2" href="/type.html?usb">Product <span class="sr-only">(current)</span></a>
+            <a class="text-white mx-2" href="#">Link</a>
+            <a class="text-white mx-2" href="#">Disabled</a>
+        </div>
+
+        <div class="ml-auto d-flex">
+            <div class="dropdown">
+                <a class="fa fa-user-o fa-2x  text-white btn" aria-hidden="true" id="userIcon"></a>
+                <div class="dropdown-menu dropdown-menu-right p-0 m-0" id="userDropDown">
+                    <div class="card-body text-center min-w-300">
+                        <div class="h4">登入帳戶</div>
+                        <form class="mt-3">
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="signinEmail" placeholder="email"
+                                    aria-describedby="emailHelp">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="signInPassword" placeholder="密碼">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block mb-2">登入</button>
+                            <div class="d-flex align-items-end justify-content-center">
+                                <span>新用戶? </span>
+                                <span class="text-danger btn bg-transparent border-0 p-0"
+                                    id="createAccount">創建你的帳戶</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <div class="position-relative btn dropdown-toggle">
+                    <span class="badge badge-primary badge-pill position-absolute" style="right: 13px; top: 0px;"
+                        id="cartQuantity">1</span>
+                    <a class="fa fa-shopping-cart fa-2x text-white" aria-hidden="true" id="cartIcon"></a>
+                </div>
+                <div class="dropdown-menu dropdown-menu-right p-0 m-0" style="min-width: 500px;">
+                    <div id="dropdownCartMenu">
+                        <!--動態顯示-->
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex align-items-end">
+                            <span>總價錢</span>
+                            <h5 class="mb-0 h4 ml-auto" id="dropdownCartMenuTotal">$0</h5>
+                        </div>
+                        <a href="/cart.html" class="btn btn-primary btn-block mt-2">進入購物車頁面</a>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </nav>
+    <nav class="d-choose my-2">
+        <div class="row d-flex justify-content-center mr-0">
+            <div class="col-md-5 text-center d-flex justify-content-center">
+                <div class="dropdown">
+                    <button class=" btn bg-transparent text-secondary dropdown-toggle" type="button"
+                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Product
+                    </button>
+                    <form class="dropdown-menu  position-absolute p-0 m-0" style="left: 0; right: 0; ">
+                        <div class="list-group h-100">
+                            <a href="/type.html?usb" class="list-group-item list-group-item-action">USB隨身碟</a>
+                            <a href="/type.html?hdd" class="list-group-item list-group-item-action">HDD硬碟</a>
+                            <a href="/type.html?mouse" class="list-group-item list-group-item-action">滑鼠</a>
+                            <a href="/type.html?keyboard" class="list-group-item list-group-item-action">鍵盤</a>
+                        </div>
+                    </form>
+                </div>
+                <a href="" class="btn  bg-transparent text-secondary  mr-3">Infomation</a>
+                <a href="" class="btn  bg-transparent text-secondary mr-3">Contact</a>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="position-relative ">
+                    <div class="bg-cover carousel-img "
+                        style="background-image: url(https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);">
+                    </div>
+                    <div class="position-absolute h-100 text-center text-white px-4"
+                        style="left: 10%; right: 10%; top: 0;">
+                        <div class="d-flex flex-column justify-content-center h-100">
+                            <h3 class="h2">Introduction</h3>
+                            <p">On the other hand, we denounce with righteous indignation and dislike
+                                men who are so
+                                beguiled
+                                </p>
+                                <a class="btn btn-primary mt-4" href="/type.html?usb">Shopping All</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <div class="container-fluid p-4 text-dark">
+        <div class="form-row">
+            <div class="col-md-3 col-6 mb-3">
+                <div class="d-flex align-items-center text-left">
+                    <i class="fa fa-shopping-bag fa-2x mr-3" aria-hidden="true"></i>
+                    <div class="text-center">
+                        <div class="h5 font-weight-bold mb-0">Free Shipping</div>
+                        <p class="mb-0">When you spend $30+</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+                <div class="d-flex align-items-center text-left">
+                    <i class="fa fa-phone fa-2x mr-3" aria-hidden="true"></i>
+                    <div>
+                        <div class="h5 font-weight-bold mb-0">Free Shipping</div>
+                        <p class="mb-0">When you spend $30+</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+                <div class="d-flex align-items-center text-left">
+                    <i class="fa fa-credit-card-alt fa-2x mr-3" aria-hidden="true"></i>
+                    <div>
+                        <div class="h5 font-weight-bold mb-0">Free Shipping</div>
+                        <p class="mb-0">When you spend $30+</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+                <div class="d-flex align-items-center text-left">
+                    <i class="fa fa fa-comments fa-2x mr-3" aria-hidden="true"></i>
+                    <div>
+                        <div class="h5 font-weight-bold mb-0">Free Shipping</div>
+                        <p class="mb-0">When you spend $30+</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container-fluid px-4 ">
+        <div class="row">
+            <div class="col-md-4 mb-3 ">
+                <div class="card bg-secondary text-light">
+                    <div class="card-body">
+                        <h5 class="card-title">LED</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-light">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card bg-secondary text-light">
+                    <div class="card-body">
+                        <h5 class="card-title">LED</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-light">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card bg-secondary text-light">
+                    <div class="card-body">
+                        <h5 class="card-title">LED</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-light">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="h4 text-center my-4 font-weight-bold">特賣商品</div>
+
+    <div class="container">
+        <div class="row" id="sale">
+            <!--動態顯示-->
+        </div>
+    </div>
+    <div class="text-center container">
+        <div class="h5 ">About ShoppingCart</div>
+        <p>Our mission statement is to provide the absolute best customer experience available in the Audio/Video
+            industry without exception. We choose to only sell the best performing products in the world, learning them
+            inside and out to ensure your experience with our organization and the products we supply are second to
+            none. HiDEF Lifestyle is one of the fastest growing Audio and Video retailers in the United States.</p>
+    </div>
+
+    <footer class="bg-dark text-center">
+        <div class="text-white">
+            Copyright @ 2021 by winsZhuang
+        </div>
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/636fa8aba2.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="all.js"></script>
+    <script src="home.js"></script>
+</body>
+
+</html>

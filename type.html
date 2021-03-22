@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="all.css">
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-danger py-3">
+        <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand " href="/index.html">3CShop</a>
+        <div class="d-none d-md-block">
+            <a class="text-white mx-2" href="/type.html?usb">Product <span class="sr-only">(current)</span></a>
+            <a class="text-white mx-2" href="#">Link</a>
+            <a class="text-white mx-2" href="#">Disabled</a>
+        </div>
+
+        <div class="ml-auto d-flex">
+            <div class="dropdown">
+                <a class="fa fa-user-o fa-2x  text-white btn" aria-hidden="true" id="userIcon"></a>
+                <div class="dropdown-menu dropdown-menu-right p-0 m-0" id="userDropDown">
+                    <div class="card-body text-center min-w-300">
+                        <div class="h4">登入帳戶</div>
+                        <form class="mt-3">
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="signinEmail" placeholder="email"
+                                    aria-describedby="emailHelp">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="signInPassword" placeholder="密碼">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block mb-2">登入</button>
+                            <small>新用戶? <span class="text-danger btn btn-sm bg-transparent border-0"
+                                    id="createAccount">創建你的帳戶</span></small>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <div class="position-relative btn dropdown-toggle">
+                    <span class="badge badge-primary badge-pill position-absolute" style="right: 13px; top: 0px;"
+                        id="cartQuantity">1</span>
+                    <a class="fa fa-shopping-cart fa-2x text-white" aria-hidden="true" id="cartIcon"></a>
+                </div>
+                <div class="dropdown-menu dropdown-menu-right p-0 m-0" style="min-width: 500px;">
+                    <div id="dropdownCartMenu">
+                        <!--動態顯示-->
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex align-items-end">
+                            <span>總價錢</span>
+                            <h5 class="mb-0 h4 ml-auto" id="dropdownCartMenuTotal">$0</h5>
+                        </div>
+                        <a href="/cart.html" class="btn btn-primary btn-block mt-2">進入購物車頁面</a>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </nav>
+    <nav class="d-choose my-2">
+        <div class="row d-flex justify-content-center mr-0">
+            <div class="col-md-5 text-center d-flex justify-content-center">
+                <div class="dropdown">
+                    <button class=" btn bg-transparent text-secondary dropdown-toggle" type="button"
+                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Product
+                    </button>
+                    <form class="dropdown-menu  position-absolute p-0 m-0" style="left: 0; right: 0; ">
+                        <div class="list-group h-100">
+                            <a href="/type.html?usb" class="list-group-item list-group-item-action">USB隨身碟</a>
+                            <a href="/type.html?hdd" class="list-group-item list-group-item-action">HDD硬碟</a>
+                            <a href="/type.html?mouse" class="list-group-item list-group-item-action">滑鼠</a>
+                            <a href="/type.html?keyboard" class="list-group-item list-group-item-action">鍵盤</a>
+                        </div>
+                    </form>
+                </div>
+                <a href="" class="btn  bg-transparent text-secondary  mr-3">Infomation</a>
+                <a href="" class="btn  bg-transparent text-secondary mr-3">Contact</a>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+
+    <!-- 輸入進來的商品資訊-->
+    <section class="container-fluid" id="productPage" alt="123">
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb bg-transparent">
+                <li class="breadcrumb-item"><a href="/index.html">首頁</a></li>
+                <li class="breadcrumb-item" id="type"></li>
+            </ol>
+        </nav>
+        <div class="form-row">
+            <div class="col-md-3 pl-4 ">
+                <div class="card mb-3">
+                    <div class="card-body text-dark">
+                        <h5 class="card-title font-weight-bold">種類</h5>
+                        <div class="text-left" id="selectType">
+                            <a class="btn btn-sm mb-1 list-group-item-action" id="usb">USB隨身碟</a>
+                            <a class="btn btn-sm mb-1 list-group-item-action" id="hdd">HDD硬碟</a>
+                            <a class="btn btn-sm mb-1 list-group-item-action" id="mouse">滑鼠</a>
+                            <a class="btn btn-sm mb-1 list-group-item-action" id="keyboard">鍵盤</a>
+                        </div>
+                    </div>
+
+                    <div class="card-body text-dark pt-0">
+                        <h5 class="card-title font-weight-bold">品牌</h5>
+                        <div class="ml-3" id="formCheck">
+                            <!--動態顯示-->
+                        </div>
+
+                    </div>
+                    <div class="card-body text-dark pt-0">
+                        <h5 class="card-title font-weight-bold">價錢</h5>
+                        <div class="input-group input-group-sm mb-2 pl-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">最低</span>
+                            </div>
+                            <input type="text" class="form-control" id="minPrice"
+                                aria-label="Dollar amount (with dot and two decimal places)">
+                        </div>
+                        <div class="input-group input-group-sm mb-3 pl-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">最高</span>
+                            </div>
+                            <input type="text" class="form-control" id="maxPrice"
+                                aria-label="Dollar amount (with dot and two decimal places)">
+                        </div>
+                        <div class="input-group input-group-sm mb-3 pl-3" id="priceFilter">
+                            <button class="btn btn-primary mr-2">篩選</button>
+                            <button class="btn btn-info">取消</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9 px-4 mb-4">
+                <div class="card w-100">
+                    <div class="img-cover" id="titleImg" style="height:200px;">
+                    </div>
+                    <div class="card-body mx-0">
+                        <div class="d-flex align-items-end mb-3">
+                            <h5 class="h4 mb-0 mr-auto" id="typeTitle"></h5>
+                            <span class="text-info"><span id="typeQuantity">0</span>個產品</span>
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="row no-gutters" id="productRow">
+                            <!--動態顯示-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-dark text-center">
+        <div class="text-white">
+            Copyright @ 2021 by winsZhuang
+        </div>
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/636fa8aba2.js"></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="all.js"></script>
+    <script src="type.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  margin-bottom: 80px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+}
+
+.carousel-img {
+  background-position: center center;
+  background-size: cover;
+  height: 500px;
+  filter: brightness(40%);
+}
+
+.img-contain {
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.img-cover {
+  background-position: center center;
+  background-size: cover;
+}
+
+.text-line-through {
+  text-decoration: line-through;
+}
+
+.card-h {
+  height: 400px;
+}
+
+.min-w-300 {
+  min-width: 300px;
+}
+
+.min-w-50 {
+  min-width: 50px;
+}
+.container-0-auto {
+  margin: 0 auto;
+}
+.text-sm {
+  font-size: 0.7rem;
+}
+@media (max-width: 992px) {
+  .d-choose {
+    display: none;
+  }
+}
