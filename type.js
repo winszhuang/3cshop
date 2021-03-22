@@ -134,7 +134,7 @@ function printProduct(pro){    //印出商品資訊 需傳入單個商品文件d
     productRow.innerHTML += `
             <div class="col-xl-3 col-lg-4 col-sm-6" id="${pro.id}">
                 <div class="card border-left-0 border-top-0 h-100">
-                    <a class="card-img-top img-contain btn" href="/product.html?id=${pro.id}"
+                    <a class="card-img-top img-contain btn" href="/3cshop/product.html?id=${pro.id}"
                         style="background-image: url(${pro.img}); height: 200px;">
                     </a>
                     <div class="card-body" style="height:110px">

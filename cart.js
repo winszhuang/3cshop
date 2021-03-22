@@ -94,8 +94,7 @@ var checkoutButton = document.getElementById("checkoutButton");
 checkoutButton.addEventListener("click",()=>{
     auth.onAuthStateChanged(function(user){
         if(user){
-            let storageList = JSON.parse(localStorage.getItem("list"));
-            location.href = "/checkout.html";
+            location.href = "/3cshop/checkout.html";
         }else{
             alert("請先登入帳戶在結帳");
         }

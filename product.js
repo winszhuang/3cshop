@@ -10,8 +10,8 @@ byIdPromise.then((doc) => {
     productPage.innerHTML += `
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb bg-transparent">
-                <li class="breadcrumb-item"><a href="/index.html">所有商品</a></li>
-                <li class="breadcrumb-item"><a href="/type.html?${pro.type}">${pro.type}</a></li>
+                <li class="breadcrumb-item"><a href="/3cshop/index.html">首頁</a></li>
+                <li class="breadcrumb-item">${pro.type}</li>
                 <li class="breadcrumb-item active" aria-current="page">${pro.name}</li>
             </ol>
         </nav>

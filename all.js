@@ -26,11 +26,6 @@ auth.onAuthStateChanged(function(user){
                 <a class="btn btn-sm mb-1 list-group-item-action" >登出</a>
             </div>        
         `
-    }else{
-        if(location.href == "checkout.html"){
-            console.log(location.href);
-            location.href = "/cart.html";
-        } 
     }
 });
 
@@ -68,7 +63,7 @@ function count(){         //閉包計數器，回傳的物件可使用獲得值�
     }
 };
 
-function list(){
+function list(){          //閉包存清單
     let arr = [];
     return {
         add(value){
@@ -157,9 +152,9 @@ userDropDown.addEventListener("click",(e)=>{
         signInHTML(card);
         signOut();
         alert("返回購物車頁面")
-        if(location.href.includes("checkout.html"))  location.href = "/cart.html";
+        if(location.href.includes("checkout.html"))  location.href = "/3cshop/cart.html";
     }else if(target.innerText == "購物紀錄"){
-        location.href = "/record.html";
+        location.href = "/3cshop/record.html";
     }
 })
 

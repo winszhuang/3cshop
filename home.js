@@ -5,7 +5,7 @@ firebase.firestore().collection("product").where("sale","!=","").get().then(func
         saleRow.innerHTML += `
                 <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
                     <div class="card h-100" id="${pro.id}" >
-                        <a class="card-img-top img-contain btn" href="/product.html?id=${doc.id}"
+                        <a class="card-img-top img-contain btn" href="/3cshop/product.html?id=${pro.id}"
                             style="min-height: 200px; background-image: url(${pro.img});">
                         </a>
                         <div class="card-body " style="bottom: 0;">

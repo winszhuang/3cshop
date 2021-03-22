@@ -45,7 +45,7 @@ finalCheck.addEventListener("click",()=>{
         localStorage.removeItem('list');
         firebase.firestore().collection("order").add(order).then(()=>{
             alert("已確認訂單");
-            location.replace("/index.html");
+            location.replace("/3cshop/index.html");
             console.log("成功存入");
         })
     }); 
